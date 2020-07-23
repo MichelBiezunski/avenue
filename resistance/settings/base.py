@@ -180,4 +180,4 @@ WAGTAIL_SITE_NAME = "Avenue de la Resistance"
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-BASE_URL = 'https://web.avenue-de-la-resistance.com/'
+BASE_URL = 'https://avenue-de-la-resistance.com/'
