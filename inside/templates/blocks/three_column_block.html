@@ -1,0 +1,28 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+<div class="container three-column-block">
+    <div class="row">
+        <div class="col sd4">
+            {% if self.l_image %}
+            {% image self.l_image original as left_image %}
+            <img src="{{ left_image.url }}"/>
+            {% endif %}
+            {% include "include/sf_blocks.html" with blocks=self.left_column only %}
+        </div>
+
+        <div class="col sd4">
+            {% if self.m_image %}
+            {% image self.m_image original as middle_image %}
+            <img src="{{ middle_image.url }}"/>
+            {% endif %}
+            {% include "include/sf_blocks.html" with blocks=self.middle_column only %}
+        </div>
+
+        <div class="col sd4">
+                {% if self.r_image %}
+                {% image self.r_image original as right_image %}
+                <img src="{{ right_image.url }}"/>
+                {% endif %}
+                {% include "include/sf_blocks.html" with blocks=self.right_column only %}
+        </div>
+    </div>
+</div>

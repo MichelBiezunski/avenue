@@ -1,0 +1,28 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+
+<div class="container two-column-block">
+    <div class="row">
+        <div class="col s6">
+            {% if self.l_image %}
+                {% image self.l_image fill-400x400 %}
+<!--                <img class="media-object"-->
+<!--                     src="{{ left_img.url }}"-->
+<!--                     alt="{{left_img.title}}"-->
+<!--                />-->
+            {% endif %}
+            {% include "include/sf_blocks.html" with blocks=self.left_column only %}
+        </div>
+
+        <div class="col s6">
+            {% if self.r_image %}
+                {% image self.r_image width-300 as right_img %}
+<!--                <img class="media-object"-->
+<!--                     src="{{ right_img.url }}"-->
+<!--                     alt="{{right_img.title}}"-->
+<!--                />-->
+            {% endif %}
+            {% include "include/sf_blocks.html" with blocks=self.right_column only %}
+        </div>
+    </div>
+</div>
+<!---->

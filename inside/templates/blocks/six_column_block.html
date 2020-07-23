@@ -1,0 +1,50 @@
+{% load wagtailimages_tags table_block_tags static %}
+{% image self.column1.image max-200x200 as image1 %}
+{% image self.column2.image max-200x200 as image2 %}
+{% image self.column3.image max-200x200 as image3 %}
+{% image self.column4.image max-200x200 as image4 %}
+{% image self.column5.image max-200x200 as image5 %}
+{% image self.column6.image max-200x200 as image6 %}
+
+<div class="container-fluid">
+  <div class="row six-columns">
+
+    <a href="{{ self.column1.link }}" target="_partner">
+      <div class="six-cell col-lg-2 col-md-3 col-sm-4 col-xs-6">
+      <img src="{{ image1.url }}" alt=""/>
+      <div class="six-column-caption">{{ self.column1.caption }}</a></div>
+    </div>
+
+    <a href="{{ self.column2.link }}" target="_partner">
+      <div class="six-cell col-lg-2 col-md-3 col-sm-4 col-xs-6">
+      <img src="{{ image2.url }}" alt=""/>
+      <div class="six-column-caption">{{ self.column2.caption }}</a></div>
+    </div>
+
+    <a href="{{ self.column3.link }}" target="_partner">
+      <div class="six-cell col-lg-2 col-md-3 col-sm-4 col-xs-6">
+      <img src="{{ image3.url }}" alt=""/>
+      <div class="six-column-caption">{{ self.column3.caption }}</a></div>
+    </div>
+
+    <a href="{{ self.column4.link }}" target="_partner">
+      <div class="six-cell col-lg-2 col-md-3 col-sm-4 col-xs-6">
+      <img src="{{ image4.url }}" alt=""/>
+      <div class="six-column-caption">{{ self.column4.caption }}</a></div>
+    </div>
+
+    <a href="{{ self.column5.link }}" target="_partner">
+      <div class="six-cell col-lg-2 col-md-3 col-sm-4 col-xs-6">
+      <img src="{{ image5.url }}" alt=""/>
+      <div class="six-column-caption">{{ self.column5.caption }}</a></div>
+    </div>
+  </a>
+
+  <a href="{{ self.column6.link }}" target="_partner">
+    <div class="six-cell col-lg-2 col-md-3  col-sm-4 col-xs-6">
+    <img src="{{ image6.url }}" alt=""/>
+    <div class="six-column-caption">{{ self.column6.caption }}</a></div>
+  </div>
+</a>
+  </div>
+</div>

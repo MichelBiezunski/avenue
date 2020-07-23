@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load wagtailcore_tags wagtailimages_tags infoloom_tags %}
+{% load menu_tags %}
+
+{% main_menu template="custom_menus/main_menu.html" %}
+
+
+
+{% block content %}
+<div class="content">
+  {{ page.body }}
+  {% footer %}
+</div>
+{% endblock content %}

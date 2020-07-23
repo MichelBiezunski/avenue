@@ -1,0 +1,30 @@
+{% load wagtailcore_tags wagtailimages_tags table_block_tags %}
+
+{% if blocks %}
+  {% for block in blocks %}
+    <div class="block-{{ block.block_type }}">
+      {% if block.block_type == 'heading' %}
+        {{ block.value }}
+
+      {% elif block.block_type == 'image' %}
+          {{ block }}
+
+      {% elif block.block_type == 'paragraph' %}
+        <p class="block-paragraph">{{ block }}</p>
+
+      {% elif block.block_type == 'carousel' %}
+          {% include_block block %}
+
+      {% elif block.block_type == 'html' %}
+        {{ block }}
+
+      {% elif block.block_type == 'table' %}
+        {{ block }}
+
+      {% elif block.block_type == 'video' %}
+        {% include_block block %}
+
+      {% endif %}
+    </div>
+  {% endfor %}
+{% endif %}
