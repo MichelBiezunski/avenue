@@ -1,0 +1,38 @@
+{% load static resistance_tags wagtailimages_tags %}
+{% block feed %}
+{% for item in feed %}
+{% image item.fallback width-1000 as fallback %}
+<!-- Video code goes here -->
+<div class="feed">
+    <!-- <video playsinline autoplay muted loop id="bgvid" poster="{% static 'img/Map.jpg' %}"> -->
+    <video playsinline autoplay muted loop id="bgvid" poster = "{% static 'img/TrianglesPlaceholder.jpg' %}">
+      <source src="{{ item.webm }}" type="video/webm">
+      <source src="{{item.mp4 }}" type="video/mp4">
+      <!-- If browser doesn't support video -->
+      <img src="{% static 'img/TrianglesPlaceholder.jpg' %}" alt="map image" />
+    </video>
+    <div class="header-text">
+        <h1>{{ item.header }}</h1>
+        <h2>{{ item.subheader }}</h2>
+    </div>
+    <a href="#process-start" class="btn btn-header page-scroll">
+      {{ item.button_text }}
+    </a>
+</div>
+{% endfor %}
+<div id="process-start"></div>
+{% endblock %}
+{% block extra_js %}
+<script src="{% static 'js/jQueryEasing.js' %}"></script>
+<script src="{% static 'js/scroll.js' %}"></script>
+
+<script>
+    $('.navbar-inverse .navbar-nav > li > a').css('color', '#e89d0c');
+    $('.navbar-inverse .navbar-nav > li > a').hover(function () {
+        $(this).css('color', '#f1d830');
+    }, function () {
+        $(this).css('color', '#e89d0c');
+    });
+</script>
+
+{% endblock %}

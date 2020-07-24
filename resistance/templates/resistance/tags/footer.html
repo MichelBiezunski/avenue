@@ -1,0 +1,8 @@
+{% load wagtailcore_tags %}
+{% block footer %}
+<div class="footer">
+    {% for item in footer %}
+        {{ item.content }}
+    {% endfor %}
+</div>
+{% endblock %}
