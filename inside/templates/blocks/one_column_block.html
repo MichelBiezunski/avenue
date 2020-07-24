@@ -1,11 +1,13 @@
 {% load wagtailimages_tags table_block_tags static %}
 
 {% if self.link.url %}<a class="pagelink" href="{{ self.link.url }}">{% endif %}
-<div class="container one-column-block">
-  <div class="col s1">
-      <div id="one-column{{ id_prefix }}">
-          {% include "include/sf_blocks.html" with blocks=self.one_column only %}
-      </div>
+    <div class="container one-column-block">
+        <div class="row">
+            <div class="col-12">
+                <div id="one-column{{ id_prefix }}">
+                    {% include "include/sf_blocks.html" with blocks=self.one_column only %}
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-{% if self.link.url %}</a>{% endif %}
+    {% if self.link.url %}</a>{% endif %}

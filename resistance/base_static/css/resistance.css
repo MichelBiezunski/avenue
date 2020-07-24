@@ -15,7 +15,7 @@ html {
 body {
     height: 100%;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #fefefe;
     font-family: 'Jost', sans-serif;
     /*font-family: 'Roboto', sans-serif;*/
     font-size: 14pt;
@@ -24,9 +24,11 @@ body {
     margin: 0 auto;
     padding: 0 15px;
     /*color: #231f20;*/
-    /*color: #454545;*/
-    color: #888888;
+    color: #454545;
+    /*color: #888888;*/
     line-height: 1.25;
+    /*background-color: #0f583e;*/
+
 }
 
 .main {
