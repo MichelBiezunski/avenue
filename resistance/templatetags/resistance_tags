@@ -27,7 +27,7 @@ def has_menu_children(page):
 # Retrieves the top menu items - the immediate children of the parent page
 # The has_menu_children method is necessary because the bootstrap menu requires
 # a dropdown class to be applied to a parent
-@register.inclusion_tag('infoloom_website/tags/top_menu.html', takes_context=True)
+@register.inclusion_tag('resistance/tags/top_menu.html', takes_context=True)
 def top_menu(context, parent, calling_page=None):
 
     menuitems = parent.get_children().live().in_menu()
@@ -65,7 +65,7 @@ def top_menu(context, parent, calling_page=None):
 
 # Retrieves the children of the top menu items for the drop downs
 @register.inclusion_tag(
-    'infoloom_website/tags/top_menu_children.html',
+    'resistance/tags/top_menu_children.html',
     takes_context=True
 )
 def top_menu_children(context, parent):
@@ -82,7 +82,7 @@ def top_menu_children(context, parent):
 # Retrieves all live pages which are children of the calling page
 # for standard index listing
 @register.inclusion_tag(
-    'infoloom_website/tags/standard_index_listing.html',
+    'resistance/tags/standard_index_listing.html',
     takes_context=True
 )
 def standard_index_listing(context, calling_page):
@@ -94,7 +94,7 @@ def standard_index_listing(context, calling_page):
     }
 
 
-@register.inclusion_tag('infoloom_website/tags/breadcrumbs.html', takes_context=True)
+@register.inclusion_tag('resistance/tags/breadcrumbs.html', takes_context=True)
 def breadcrumbs(context):
     self = context.get('self')
     if self is None or self.depth <= 2:
@@ -110,7 +110,7 @@ def breadcrumbs(context):
 
 
 # Footer snippets
-@register.inclusion_tag('infoloom_website/tags/footer.html', takes_context=True)
+@register.inclusion_tag('resistance/tags/footer.html', takes_context=True)
 def footer(context):
     return {
         'footer': Footer.objects.all(),
@@ -119,7 +119,7 @@ def footer(context):
 
 
 # Feed Video
-@register.inclusion_tag('infoloom_website/tags/feed.html', takes_context=True)
+@register.inclusion_tag('resistance/tags/feed.html', takes_context=True)
 def feed(context):
     return {
         'feed': Feed.objects.all(),

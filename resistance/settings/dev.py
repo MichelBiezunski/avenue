@@ -25,7 +25,7 @@ LOGGING = {
         'watched_file': {
             'level': 'INFO',
             'class': 'logging.handlers.WatchedFileHandler',
-            'filename': '/var/log/django/infoloom_website.log',
+            'filename': '/var/log/django/resistance.log',
         },
     },
     'loggers': {
