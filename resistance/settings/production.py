@@ -2,7 +2,7 @@ from .base import *
 
 DEBUG = False
 WAGTAILADMINBASE_URL = 'avenue-de-la-resistance.com'
-ALLOWED_HOSTS = ['avenue-de-la-resistance.com', '23.239.13.153']
+ALLOWED_HOSTS = ['www.avenue-de-la-resistance.com', 'avenue-de-la-resistance.com', '23.239.13.153']
 
 DATABASES['default']['NAME'] = 'resistance_db'
 
