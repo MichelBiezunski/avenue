@@ -69,7 +69,7 @@ class MediaBlock(AbstractMediaChooserBlock):
         if value.type == 'video':
             player_code = '''
             <div>
-            <video width="320" height="240" controls>
+            <video width="100%" controls>
             {0}
             Your browser does not support the video tag.
             </video>

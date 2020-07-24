@@ -2,7 +2,7 @@
 
 <div class="container two-column-block">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 col1">
             {% if self.l_image %}
                 {% image self.l_image fill-400x400 %}
 <!--                <img class="media-object"-->
@@ -13,7 +13,7 @@
             {% include "include/sf_blocks.html" with blocks=self.left_column only %}
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6 col2">
             {% if self.r_image %}
                 {% image self.r_image width-300 as right_img %}
 <!--                <img class="media-object"-->
