@@ -1,13 +1,8 @@
 {% extends 'base.html' %}
 {% load wagtailcore_tags wagtailimages_tags resistance_tags %}
-{% load menu_tags %}
-
-{% main_menu template="custom_menus/main_menu.html" %}
-
 
 {% block content %}
 <div class="content">
-  {% main_menu %}
   {{ page.body }}
   {% footer %}
 </div>
