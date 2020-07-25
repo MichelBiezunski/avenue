@@ -5,9 +5,9 @@
 {% main_menu template="custom_menus/main_menu.html" %}
 
 
-
 {% block content %}
 <div class="content">
+  {% main_menu %}
   {{ page.body }}
   {% footer %}
 </div>

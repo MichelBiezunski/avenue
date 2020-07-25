@@ -1,6 +1,7 @@
 from django.db import models
 
-from wagtail.core.models import Page
+# from wagtail.core.models import Page
+from wagtailmenus.models import MenuPage
 from wagtail.core.fields import StreamField
 from wagtail.admin.edit_handlers import StreamFieldPanel
 from wagtail.snippets.edit_handlers import SnippetChooserPanel
@@ -8,7 +9,7 @@ from wagtail.snippets.edit_handlers import SnippetChooserPanel
 from inside.blocks import OneColumnBlock, TwoColumnBlock, ThreeColumnBlock, SixColumnBlock, CarouselBlock, MediaBlock
 from inside.snippets import Feed
 
-class InsidePage(Page):
+class InsidePage(MenuPage):
 
     def get_context(self, request, *args, **kwargs):
 
@@ -38,8 +39,8 @@ class InsidePage(Page):
 
     ], blank=True, null=True)
 
-    content_panels = Page.content_panels + [
+    content_panels = MenuPage.content_panels + [
         StreamFieldPanel('body'),
-        SnippetChooserPanel('feed'),
+        # SnippetChooserPanel('feed'),
     ]
 

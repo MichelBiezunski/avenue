@@ -534,6 +534,10 @@ img.carousel_item {
     background-color: #d8993f;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #2b2b2b;
+}
 /* ------------------------
 TABLES
 First column considered headers.
