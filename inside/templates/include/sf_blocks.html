@@ -21,6 +21,9 @@
       {% elif block.block_type == 'table' %}
         {{ block }}
 
+	{% elif block.block_type == 'link' %}
+	{{ block }}
+
       {% elif block.block_type == 'video' %}
         {% include_block block %}
 
