@@ -18,3 +18,4 @@ resistance.sql
 localhost_media
 localhost_static
 setup_bento.sh
+**.DS_Store
