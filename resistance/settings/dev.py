@@ -11,8 +11,17 @@ DEBUG = True
 
 # SECURITY WARNING: define the correct hosts in production!
 ALLOWED_HOSTS = ['*']
-STATIC_ROOT = os.path.join(BASE_DIR, 'localhost_static')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'localhost_media')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'localhost_static')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'localhost_media')
+STATIC_ROOT = 'https://avenue-de-la-resistance.com/static/'
+# STATIC_URL = 'https://avenue-de-la-resistance.com/static'
+# STATIC_URL = '/static/'
+STATIC_URL = STATIC_ROOT
+
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = 'https://avenue-de-la-resistance.com/'
+MEDIA_URL = os.path.join(MEDIA_ROOT, 'media/')
+
 
 
 DATABASES['default']['NAME'] = 'resistance_db'

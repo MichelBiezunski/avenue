@@ -5,6 +5,8 @@ from wagtailmenus.models import MenuPage
 from wagtail.core.fields import StreamField
 from wagtail.admin.edit_handlers import StreamFieldPanel
 from wagtail.snippets.edit_handlers import SnippetChooserPanel
+from wagtail_blocks.blocks import HeaderBlock, ListBlock, ImageTextOverlayBlock, CroppedImagesWithTextBlock, \
+    ListWithImagesBlock, ThumbnailGalleryBlock, ChartBlock, MapBlock, ImageSliderBlock
 
 from inside.blocks import OneColumnBlock, TwoColumnBlock, ThreeColumnBlock, SixColumnBlock, CarouselBlock, MediaBlock
 from inside.snippets import Feed
@@ -36,6 +38,7 @@ class InsidePage(MenuPage):
         ('six_columns', SixColumnBlock()),
         ('carousel', CarouselBlock()),
         ('media', MediaBlock()),
+        ('map', MapBlock()),
 
     ], blank=True, null=True)
 

@@ -66,7 +66,7 @@ class MediaBlock(AbstractMediaChooserBlock):
         if not value:
             return ''
 
-        if value.type == 'video':
+        if value.type == 'media':
             player_code = '''
             <div>
             <video width="100%" controls>
@@ -102,7 +102,7 @@ class OneColumnBlock(blocks.StructBlock):
         ('table', TableBlock(required=False)),
         ('carousel', CarouselBlock(required=False)),
         ('image', ImageChooserBlock()),
-        ('video', MediaBlock(required=False)),
+        ('media', MediaBlock(required=False)),
     ], icon='arrow-left', label='One column', required=False)
 
     class Meta:
@@ -119,7 +119,7 @@ class TwoColumnBlock(blocks.StructBlock):
         ('image', ImageChooserBlock()),
         ('embedded_video', EmbedBlock()),
         ('html', blocks.RawHTMLBlock()),
-        ('video', MediaBlock(required=False)),
+        ('media', MediaBlock(required=False)),
     ], icon='arrow-left', label='Left column content', required=False)
 
     right_column = blocks.StreamBlock([
@@ -127,7 +127,7 @@ class TwoColumnBlock(blocks.StructBlock):
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
         ('embedded_video', EmbedBlock()),
-        ('video', MediaBlock(required='False'))
+        ('media', MediaBlock(required='False'))
     ], icon='arrow-right', label='Right column content', required=False)
 
     class Meta:
@@ -146,7 +146,7 @@ class ThreeColumnBlock(blocks.StructBlock):
         ('image', ImageChooserBlock()),
         ('embedded_video', EmbedBlock()),
         ('html', blocks.RawHTMLBlock()),
-        ('video', MediaBlock(required=False)),
+        ('media', MediaBlock(required=False)),
     ], icon='arrow-left', label='Left column content')
 
     middle_column = blocks.StreamBlock([
@@ -155,7 +155,7 @@ class ThreeColumnBlock(blocks.StructBlock):
         ('image', ImageChooserBlock()),
         ('embedded_video', EmbedBlock()),
         ('html', blocks.RawHTMLBlock()),
-        ('video', MediaBlock(required=False)),
+        ('media', MediaBlock(required=False)),
     ], icon='arrow-down', label='Middle column content')
 
     right_column = blocks.StreamBlock([
@@ -164,7 +164,7 @@ class ThreeColumnBlock(blocks.StructBlock):
         ('image', ImageChooserBlock()),
         ('embedded_video', EmbedBlock()),
         ('html', blocks.RawHTMLBlock()),
-        ('video', MediaBlock()),
+        ('media', MediaBlock()),
     ], icon='arrow-right', label='Right column content', required=False)
 
     class Meta:
