@@ -56,6 +56,8 @@ INSTALLED_APPS = [
     'wagtail.admin',
     'wagtail.core',
     'wagtail.contrib.table_block',
+    'wagtail.contrib.routable_page',
+    'wagtail.contrib.settings',
     'wagtail.contrib.modeladmin',
     'wagtailmenus',
     'wagtailmedia',
@@ -116,7 +118,7 @@ DATABASES = {
         'NAME': '',
         'USER': 'postgres',
         'PASSWORD': SECRETS['database_password'],
-        'HOST':'localhost',
+        'HOST': 'localhost',
         'PORT': '5432'
     }
 }
@@ -187,4 +189,4 @@ WAGTAIL_SITE_NAME = "Avenue de la Resistance"
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-BASE_URL = 'https://avenue-de-la-resistance.com/'
+BASE_URL = 'https://avenue-de-la-resistance.com'
