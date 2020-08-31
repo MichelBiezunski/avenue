@@ -7,7 +7,7 @@
         {{ block.value }}
 
       {% elif block.block_type == 'image' %}
-          {{ block }}
+         {{ block }}
 
       {% elif block.block_type == 'paragraph' %}
         <p class="block-paragraph">{{ block }}</p>
@@ -21,8 +21,8 @@
       {% elif block.block_type == 'table' %}
         {{ block }}
 
-	{% elif block.block_type == 'link' %}
-	{{ block }}
+	  {% elif block.block_type == 'link' %}
+	    {{ block }}
 
       {% elif block.block_type == 'media' %}
         {% include_block block %}
