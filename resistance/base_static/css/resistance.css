@@ -519,6 +519,7 @@ img.carousel_item {
     text-align: center;
     color: white;
     background: black;
+    opacity: 0.6;
 }
 
 .carousel-description h6 {
