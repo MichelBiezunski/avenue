@@ -517,7 +517,9 @@ img.carousel_item {
 .carousel-caption {
     height: auto;
     text-align: center;
-    color: grey;
+    color: white;
+    background: black;
+    opacity: 0.6;
 }
 
 .carousel-description h6 {
