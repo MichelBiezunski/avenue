@@ -525,7 +525,7 @@ img.carousel_item {
 .carousel-description h6 {
     margin: auto;
     text-align: center;
-    color: grey;
+    color: red;
 }
 
 .carousel-indicators > li {
